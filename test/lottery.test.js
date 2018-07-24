@@ -117,7 +117,7 @@ describe('Lottery Contract', () => {
         const players = await lottery.methods.getPlayers().call({
             from: accounts[0]
         });
-        
+
         await lottery.methods.enter().send({
             from: accounts[1],
             value: web3.utils.toWei('2', 'ether')
@@ -134,8 +134,6 @@ describe('Lottery Contract', () => {
         console.log(finalBalance - initialBalance);
 
         console.log(players);
-
-
 
         
     });
